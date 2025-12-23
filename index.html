@@ -1,43 +1,52 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "tb-green": "#15b392",
-            },
-          },
-        },
-      };
-    </script>
-  </head>
-  <body>
-    <header>
-      <!-- MASUKAN KODE NAVBAR DISINI -->
-    </header>
-    <main>
-      <section id="about">
-        <!-- MASUKAN KODE SECTION ABOUT DISINI -->
-      </section>
-      <section id="skills">
-        <!-- MASUKAN KODE SECTION SKILL DISINI -->
-      </section>
-      <section id="experience">
-        <!-- MASUKAN KODE SECTION EXPERIENCE DISINI -->
-      </section>
-      <section id="projects">
-        <!-- MASUKAN KODE SECTION PROJECTS DISINI -->
-      </section>
-    </main>
-    <footer class="bg-footer">
-      <!-- MASUKAN KODE FOOTER DISINI -->
-    </footer>
-    <script src="script.js"></script>
-  </body>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solo Photo Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="scroll-smooth">
+
+  <div id="navbar"></div>
+  <div id="hero"></div>
+  <div id="about"></div>
+  <div id="services"></div>
+  <div id="gallery"></div>
+  <div id="contact"></div>
+
+<!-- BOOKING MODAL -->
+<div id="bookingModal"
+  class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
+
+  <div class="bg-white rounded-lg p-6 w-[90%] max-w-md relative animate-fadeIn">
+    <button onclick="closeModal()"
+      class="absolute top-3 right-3 text-gray-500 hover:text-black">
+      ✕
+    </button>
+
+    <h3 class="text-2xl font-bold mb-4">Book a Session</h3>
+
+    <form class="space-y-4">
+      <input type="text" placeholder="Your Name"
+        class="w-full border p-2 rounded">
+
+      <input type="date"
+        class="w-full border p-2 rounded">
+
+      <input type="time"
+        class="w-full border p-2 rounded">
+
+      <button type="submit"
+        class="w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition">
+        Submit Booking
+      </button>
+    </form>
+  </div>
+</div>
+
+  <script src="js/include.js"></script>
+  <script src="js/interaction.js"></script>
+</body>
 </html>
