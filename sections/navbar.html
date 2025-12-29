@@ -1,11 +1,54 @@
-<header class="bg-black/80 backdrop-blur text-white fixed w-full z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="font-bold tracking-wide">SOLO PHOTO STUDIO</h1>
-    <nav class="space-x-6 text-sm">
-      <a href="#about" class="hover:text-gray-300 transition">About</a>
-      <a href="#services" class="hover:text-gray-300 transition">Services</a>
-      <a href="#gallery" class="hover:text-gray-300 transition">Gallery</a>
-      <a href="#contact" class="hover:text-gray-300 transition">Contact</a>
-    </nav>
+<header class="fixed top-0 w-full z-50">
+  <div class="mx-auto max-w-7xl px-6">
+    <div
+      class="mt-4 flex items-center justify-between rounded-2xl
+             bg-white/70 backdrop-blur-xl
+             border border-[#EADDE3]
+             px-6 py-3 shadow-md">
+
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <img
+          src="images/logo.png"
+          alt="Solo Photo Studio"
+          class="w-9 h-9 rounded-lg object-contain"
+        />
+        <span class="font-semibold tracking-wide text-[#2B2B2B]">
+          SOLOPHOTO STUDIO
+        </span>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#about"
+           class="text-[#5B5B5B] hover:text-[#E58DA6] transition">
+          About
+        </a>
+        <a href="#services"
+           class="text-[#5B5B5B] hover:text-[#E58DA6] transition">
+          Services
+        </a>
+        <a href="#gallery"
+           class="text-[#5B5B5B] hover:text-[#E58DA6] transition">
+          Gallery
+        </a>
+        <a href="#contact"
+           class="text-[#5B5B5B] hover:text-[#E58DA6] transition">
+          Contact
+        </a>
+      </nav>
+
+      <!-- CTA -->
+      <a
+        href="https://reservasi.me/semarang/"
+        target="_blank"
+        class="hidden md:inline-flex items-center gap-2
+               rounded-full bg-[#E58DA6]
+               px-5 py-2 text-sm font-semibold text-white
+               hover:bg-[#d97b95] hover:shadow-lg hover:shadow-pink-300/40
+               transition">
+        Book Now
+      </a>
+    </div>
   </div>
 </header>
