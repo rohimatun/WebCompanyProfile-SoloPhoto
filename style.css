@@ -19,3 +19,75 @@
   background-color: #141b24;
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23006550' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
+
+/* ABOUT SECTION STYLES */ /* Layout */
+.about-section {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+} /* Text */
+.about-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  animation: fadeUp 0.8s ease forwards;
+  color: #e58da6;
+}
+.about-desc {
+  max-width: 720px;
+  margin: 0 auto 60px;
+  color: #666;
+  line-height: 1.7;
+  animation: fadeUp 1s ease forwards;
+} /* Grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+} /* Cards */
+.about-card {
+  padding: 32px 24px;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff1f6;
+  color: #e58da6;
+}
+.about-card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.about-card p {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.6;
+} /* Hover effect */
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+} /* Animation delay */
+.delay-1 {
+  animation-delay: 0.2s;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+} /* Keyframes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
