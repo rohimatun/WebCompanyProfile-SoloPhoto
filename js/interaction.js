@@ -24,3 +24,32 @@ function openLightbox(src) {
   overlay.onclick = () => overlay.remove();
   document.body.appendChild(overlay);
 }
+
+// ===== ABOUT ANIMATIONS =====
+document.body.classList.add("js-scroll");
+
+function initAboutAnimation() {
+  const elements = document.querySelectorAll(
+    "#about .about-title, #about .about-desc, #about .about-card"
+  );
+
+  if (!elements.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show"); // repeat scroll
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  elements.forEach((el) => observer.observe(el));
+}
+
+/* tunggu include selesai */
+setTimeout(initAboutAnimation, 500);
