@@ -53,3 +53,37 @@ function initAboutAnimation() {
 
 /* tunggu include selesai */
 setTimeout(initAboutAnimation, 500);
+// ===== GALLERY CAROUSEL SCROLL (LEFT - RIGHT) =====
+function initGalleryCarousel() {
+  const items = document.querySelectorAll(".gallery-item");
+  if (!items.length) return;
+
+  // kasih class kiri / kanan otomatis
+  items.forEach((item, index) => {
+    if (index % 2 === 0) {
+      item.classList.add("gallery-left");
+    } else {
+      item.classList.add("gallery-right");
+    }
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add("show");
+          }, index * 120); // efek carousel berurutan
+        } else {
+          entry.target.classList.remove("show"); // animasi ulang saat scroll balik
+        }
+      });
+    },
+    { threshold: 0.25 }
+  );
+
+  items.forEach((item) => observer.observe(item));
+}
+
+/* tunggu semua include & layout */
+setTimeout(initGalleryCarousel, 500);

@@ -100,3 +100,23 @@
 .delay-3 {
   transition-delay: 0.45s;
 }
+
+.gallery-item {
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+/* posisi awal */
+.gallery-left {
+  transform: translateX(-60px) scale(0.95);
+}
+
+.gallery-right {
+  transform: translateX(60px) scale(0.95);
+}
+
+/* saat muncul */
+.gallery-item.show {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
