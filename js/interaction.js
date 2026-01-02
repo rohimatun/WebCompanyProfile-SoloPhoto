@@ -87,3 +87,30 @@ function initGalleryCarousel() {
 
 /* tunggu semua include & layout */
 setTimeout(initGalleryCarousel, 500);
+
+// ===== SERVICES ANIMATION =====
+function initServicesAnimation() {
+  const elements = document.querySelectorAll(
+    "#services .services-title, #services .services-desc, #services .service-card, #services .addon-card"
+  );
+
+  if (!elements.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show"); // repeat animation
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  elements.forEach((el) => observer.observe(el));
+}
+
+/* tunggu include services selesai */
+setTimeout(initServicesAnimation, 500);
