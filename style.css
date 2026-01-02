@@ -21,6 +21,63 @@
 }
 
 /* ============================= */
+/*          HERO ANIMATION       */
+/* ============================= */
+
+.hero-anim .hero-item {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.hero-anim.show .hero-item {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+/* stagger */
+.hero-anim.show .hero-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.hero-anim.show .hero-item:nth-child(2) {
+  transition-delay: 0.25s;
+}
+.hero-anim.show .hero-item:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.hero-anim.show .hero-item:nth-child(4) {
+  transition-delay: 0.55s;
+}
+
+/* image sedikit beda arah */
+.hero-image .hero-item {
+  transform: translateY(30px) scale(0.96);
+}
+
+.hero-anim.show .hero-image .hero-item {
+  transform: translateY(0) scale(1);
+}
+
+/* blob subtle floating */
+.hero-blob {
+  animation: float 8s ease-in-out infinite;
+}
+
+.blob-2 {
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+/* ============================= */
 /*        ABOUT SECTION          */
 /* ============================= */
 .about-section {

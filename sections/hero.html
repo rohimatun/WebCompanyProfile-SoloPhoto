@@ -1,76 +1,52 @@
 <section
   id="hero"
-  class="relative min-h-screen flex items-center overflow-hidden pt-40
-         bg-gradient-to-br from-[#FAF7F2] via-[#FFF1F6] to-[#FAF7F2]">
-
+  class="hero-anim relative min-h-screen flex items-center overflow-hidden pt-40 bg-gradient-to-br from-[#FAF7F2] via-[#FFF1F6] to-[#FAF7F2]"
+>
   <!-- Decorative Blobs -->
-  <div class="absolute -top-40 -right-40 w-[420px] h-[420px]
-              bg-pink-200/50 rounded-full blur-[140px]"></div>
-  <div class="absolute bottom-0 -left-40 w-[380px] h-[380px]
-              bg-rose-100/60 rounded-full blur-[140px]"></div>
+  <div
+    class="hero-blob blob-1 absolute -top-40 -right-40 w-[420px] h-[420px] bg-pink-200/50 rounded-full blur-[140px]"
+  ></div>
+  <div
+    class="hero-blob blob-2 absolute bottom-0 -left-40 w-[380px] h-[380px] bg-rose-100/60 rounded-full blur-[140px]"
+  ></div>
 
-  <div class="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-
+  <div
+    class="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center"
+  >
     <!-- TEXT -->
-    <div class="space-y-8">
+    <div class="hero-text space-y-8">
       <span
-        class="inline-block px-4 py-1 rounded-full text-sm font-medium
-               bg-[#F6E8ED] text-[#C26D86]">
+        class="hero-item inline-block px-4 py-1 rounded-full text-sm font-medium bg-[#F6E8ED] text-[#C26D86]"
+      >
         Self Photo Studio • Semarang
       </span>
 
-      <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-[#2B2B2B]">
+      <h1
+        class="hero-item text-5xl md:text-6xl font-extrabold leading-tight text-[#2B2B2B]"
+      >
         Capture Your <br />
         <span class="text-[#E58DA6]">Best Moment</span>
       </h1>
 
-      <p class="max-w-xl text-lg text-[#5B5B5B] leading-relaxed">
-        Studio foto self-service modern di Semarang.  
-        Bebas pose tanpa fotografer, hasil profesional,
-        aesthetic, dan siap upload.
+      <p class="hero-item max-w-xl text-lg text-[#5B5B5B] leading-relaxed">
+        Studio foto self-service modern di Semarang. Bebas pose tanpa
+        fotografer, hasil profesional, aesthetic, dan siap upload.
       </p>
 
-      <!-- BUTTONS (ROUND VERSION) -->
-      <div class="flex flex-wrap gap-5">
-        <a href="https://reservasi.me/semarang/"
-           target="_blank"
-           class="inline-flex items-center gap-2
-                  bg-[#E58DA6] text-white
-                  px-9 py-4 rounded-full font-semibold
-                  shadow-lg
-                  hover:bg-[#d97b95] hover:shadow-pink-300/40
-                  transition">
-          Book Now →
-        </a>
-
-        <a href="#contact"
-           class="inline-flex items-center justify-center
-            px-9 py-4 rounded-full
-            border border-[#EADDE3]
-            text-[#2B2B2B]
-            transition
-            hover:bg-[#2B2B2B]
-            hover:text-white">
-          Hubungi Kami
-        </a>
+      <div class="hero-item flex flex-wrap gap-5">
+        <!-- buttons -->
       </div>
     </div>
 
     <!-- IMAGE -->
-    <div class="hidden md:flex justify-center">
-      <div class="relative">
-        <div
-          class="absolute inset-0 rounded-3xl
-                 bg-pink-200/60 blur-3xl">
-        </div>
-
+    <div class="hero-image hidden md:flex justify-center">
+      <div class="relative hero-item">
+        <div class="absolute inset-0 rounded-3xl bg-pink-200/60 blur-3xl"></div>
         <img
           src="images/sololoc.png"
-          alt="Solo Photo Studio"
-          class="relative w-[420px] rounded-3xl shadow-xl
-                 border border-white">
+          class="relative w-[420px] rounded-3xl shadow-xl border border-white"
+        />
       </div>
     </div>
-
   </div>
 </section>

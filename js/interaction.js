@@ -1,3 +1,14 @@
+// ===== HERO ANIMATION =====
+function initHeroAnimation() {
+  const hero = document.querySelector(".hero-anim");
+  if (!hero) return;
+
+  hero.classList.add("show");
+}
+
+/* tunggu include hero selesai */
+setTimeout(initHeroAnimation, 500);
+
 // ===== BOOKING MODAL =====
 const modal = document.getElementById("bookingModal");
 
