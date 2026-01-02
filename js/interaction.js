@@ -125,3 +125,33 @@ function initServicesAnimation() {
 
 /* tunggu include services selesai */
 setTimeout(initServicesAnimation, 500);
+
+
+// ===== CONTACT ANIMATION =====
+function initContactAnimation() {
+  const contact = document.querySelector(".contact-anim");
+  const items = document.querySelectorAll(".contact-item");
+  const map = document.querySelector(".map-anim");
+
+  if (!contact) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          contact.classList.add("show");
+          map?.classList.add("show");
+        } else {
+          contact.classList.remove("show");
+          map?.classList.remove("show");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  observer.observe(contact);
+}
+
+/* tunggu semua include selesai */
+setTimeout(initContactAnimation, 500);
